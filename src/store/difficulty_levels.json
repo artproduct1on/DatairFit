@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "name": "Very Beginner",
+    "description": "For absolute beginners or those with significant physical limitations."
+  },
+  {
+    "id": "2",
+    "name": "Beginner",
+    "description": "Suitable for individuals new to exercise or returning after a long break."
+  },
+  {
+    "id": "3",
+    "name": "Intermediate",
+    "description": "For those with some exercise experience, capable of performing basic movements with good form."
+  },
+  {
+    "id": "4",
+    "name": "Advanced",
+    "description": "For experienced individuals with a high level of fitness and strength."
+  },
+  {
+    "id": "5",
+    "name": "Expert",
+    "description": "For elite athletes or those with exceptional strength, endurance, and technique."
+  }
+]

@@ -1,0 +1,598 @@
+[
+  {
+    "id": "1",
+    "name": "Squats (Bodyweight)",
+    "category_id": "1",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "1",
+      "2",
+      "3"
+    ],
+    "description": "A compound exercise that works the entire lower body. Stand with feet shoulder-width apart, lower your hips as if sitting in a chair, keeping your chest up and back straight.",
+    "equipment_ids": [
+      "1"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Squat_(exercise)"
+  },
+  {
+    "id": "2",
+    "name": "Deadlifts (Conventional)",
+    "category_id": "2",
+    "difficulty_id": "3",
+    "muscle_group_ids": [
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "21"
+    ],
+    "description": "A foundational strength exercise. Lift a barbell from the floor to a standing position, engaging your posterior chain. Focus on proper form to avoid injury.",
+    "equipment_ids": [
+      "2"
+    ],
+    "wikipedia_link": "https://en.wikipedia.com/wiki/Deadlift"
+  },
+  {
+    "id": "3",
+    "name": "Bench Press (Barbell)",
+    "category_id": "3",
+    "difficulty_id": "3",
+    "muscle_group_ids": [
+      "7",
+      "8",
+      "9",
+      "11"
+    ],
+    "description": "Lie on a bench and press a barbell upwards from your chest. Great for building upper body strength and mass.",
+    "equipment_ids": [
+      "2",
+      "4"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Bench_press"
+  },
+  {
+    "id": "4",
+    "name": "Overhead Press (Barbell)",
+    "category_id": "4",
+    "difficulty_id": "3",
+    "muscle_group_ids": [
+      "10",
+      "8",
+      "11"
+    ],
+    "description": "Press a barbell overhead from shoulder height. Works the shoulders and helps build overall upper body stability.",
+    "equipment_ids": [
+      "2"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Overhead_press"
+  },
+  {
+    "id": "5",
+    "name": "Pull-ups",
+    "category_id": "5",
+    "difficulty_id": "4",
+    "muscle_group_ids": [
+      "5",
+      "12",
+      "6",
+      "10",
+      "22"
+    ],
+    "description": "Hang from a bar with an overhand grip and pull your body up until your chin clears the bar. An excellent exercise for building back and bicep strength.",
+    "equipment_ids": [
+      "5"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Pull-up"
+  },
+  {
+    "id": "6",
+    "name": "Lunges (Bodyweight)",
+    "category_id": "1",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "1",
+      "2",
+      "3"
+    ],
+    "description": "Step forward with one leg and lower your hips until both knees are bent at approximately a 90-degree angle. Improves balance and leg strength.",
+    "equipment_ids": [
+      "1"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Lunge_(exercise)"
+  },
+  {
+    "id": "7",
+    "name": "Plank (Forearm)",
+    "category_id": "6",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "13",
+      "14",
+      "4",
+      "23"
+    ],
+    "description": "Hold a position similar to the top of a push-up, supporting your body on your forearms and toes. Engages the entire core for stability.",
+    "equipment_ids": [
+      "1",
+      "14"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Plank_(exercise)"
+  },
+  {
+    "id": "8",
+    "name": "Russian Twists",
+    "category_id": "6",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "14",
+      "13"
+    ],
+    "description": "Sit on the floor with knees bent and feet lifted. Lean back slightly and twist your torso from side to side. Targets the obliques.",
+    "equipment_ids": [
+      "1",
+      "6"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Twist_(exercise)"
+  },
+  {
+    "id": "9",
+    "name": "Dumbbell Bicep Curls",
+    "category_id": "7",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "12",
+      "6"
+    ],
+    "description": "Stand or sit, holding dumbbells with palms facing forward. Curl the weights up towards your shoulders, squeezing your biceps.",
+    "equipment_ids": [
+      "3"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Bicep_curl"
+  },
+  {
+    "id": "10",
+    "name": "Tricep Dips (Bench)",
+    "category_id": "7",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "8",
+      "7",
+      "10"
+    ],
+    "description": "Use a bench to lower your body by bending your elbows, then push back up. Excellent for tricep development.",
+    "equipment_ids": [
+      "4"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Dip_(exercise)"
+  },
+  {
+    "id": "11",
+    "name": "Push-ups (Standard)",
+    "category_id": "3",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "7",
+      "8",
+      "10",
+      "13"
+    ],
+    "description": "Lie face down on the floor with hands slightly wider than shoulder-width apart. Push up until your arms are straight, keeping your body in a straight line.",
+    "equipment_ids": [
+      "1"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Push-up"
+  },
+  {
+    "id": "12",
+    "name": "Rowing Machine",
+    "category_id": "8",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "2",
+      "5",
+      "13",
+      "15",
+      "1"
+    ],
+    "description": "Simulates rowing a boat, providing a full-body cardiovascular and strength workout. Focus on a strong leg drive followed by a pull with your arms and back.",
+    "equipment_ids": [
+      "8"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Indoor_rower"
+  },
+  {
+    "id": "13",
+    "name": "Burpees",
+    "category_id": "2",
+    "difficulty_id": "3",
+    "muscle_group_ids": [
+      "15",
+      "23",
+      "7",
+      "1",
+      "3"
+    ],
+    "description": "A high-intensity exercise combining a squat, push-up, and jump. Excellent for building explosive power and cardiovascular endurance.",
+    "equipment_ids": [
+      "1"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Burpee"
+  },
+  {
+    "id": "14",
+    "name": "Leg Press",
+    "category_id": "1",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "1",
+      "2",
+      "3",
+      "17"
+    ],
+    "description": "Sit on a leg press machine and push the platform away with your feet. Allows for heavy lifting to build leg strength with less stress on the back.",
+    "equipment_ids": [
+      "7"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Leg_press"
+  },
+  {
+    "id": "15",
+    "name": "Lateral Raises (Dumbbell)",
+    "category_id": "4",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "16"
+    ],
+    "description": "Hold dumbbells in each hand and raise them out to the sides until your arms are parallel to the floor. Isolates the side deltoid muscles.",
+    "equipment_ids": [
+      "3"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Lateral_raise"
+  },
+  {
+    "id": "16",
+    "name": "Calf Raises (Standing)",
+    "category_id": "1",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "17",
+      "24",
+      "25"
+    ],
+    "description": "Stand on the balls of your feet and raise your heels as high as possible. Targets the calf muscles.",
+    "equipment_ids": [
+      "1",
+      "6"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Calf_raise"
+  },
+  {
+    "id": "17",
+    "name": "Barbell Rows (Bent-Over)",
+    "category_id": "5",
+    "difficulty_id": "3",
+    "muscle_group_ids": [
+      "5",
+      "18",
+      "22",
+      "12",
+      "21"
+    ],
+    "description": "Bend at the hips, keeping your back straight, and pull a barbell towards your lower chest. Excellent for building back thickness.",
+    "equipment_ids": [
+      "2"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Bent-over_row"
+  },
+  {
+    "id": "18",
+    "name": "Leg Curls (Machine)",
+    "category_id": "1",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "2"
+    ],
+    "description": "Lie face down on a machine and curl your legs towards your glutes. Isolates the hamstrings.",
+    "equipment_ids": [
+      "15"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Leg_curl"
+  },
+  {
+    "id": "19",
+    "name": "Leg Extensions (Machine)",
+    "category_id": "1",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "1"
+    ],
+    "description": "Sit on a machine and extend your legs forward. Isolates the quadriceps.",
+    "equipment_ids": [
+      "16"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Leg_extension"
+  },
+  {
+    "id": "20",
+    "name": "Face Pulls (Cable)",
+    "category_id": "5",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "18",
+      "19",
+      "26",
+      "10"
+    ],
+    "description": "Using a cable machine, pull a rope attachment towards your face, externally rotating your shoulders. Great for posture and shoulder health.",
+    "equipment_ids": [
+      "12"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Face_pull"
+  },
+  {
+    "id": "21",
+    "name": "Glute Bridge",
+    "category_id": "1",
+    "difficulty_id": "1",
+    "muscle_group_ids": [
+      "3",
+      "2",
+      "4"
+    ],
+    "description": "Lie on your back with knees bent and feet flat on the floor. Lift your hips off the ground, squeezing your glutes.",
+    "equipment_ids": [
+      "1",
+      "6"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Glute_bridge"
+  },
+  {
+    "id": "22",
+    "name": "Crunches",
+    "category_id": "6",
+    "difficulty_id": "1",
+    "muscle_group_ids": [
+      "13"
+    ],
+    "description": "Lie on your back, knees bent, and lift your upper body towards your knees, focusing on contracting the abs.",
+    "equipment_ids": [
+      "1",
+      "14"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Crunch_(exercise)"
+  },
+  {
+    "id": "23",
+    "name": "Bicycle Crunches",
+    "category_id": "6",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "13",
+      "14"
+    ],
+    "description": "Lie on your back, bring knees towards chest, and alternate touching elbow to opposite knee, mimicking a cycling motion.",
+    "equipment_ids": [
+      "1",
+      "14"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Bicycle_crunch"
+  },
+  {
+    "id": "24",
+    "name": "Tricep Pushdowns (Cable)",
+    "category_id": "7",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "8"
+    ],
+    "description": "Using a cable machine, push a bar or rope attachment downwards, extending your arms. Isolates the triceps.",
+    "equipment_ids": [
+      "12"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Triceps_pushdown"
+  },
+  {
+    "id": "25",
+    "name": "Hammer Curls (Dumbbell)",
+    "category_id": "7",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "12",
+      "6"
+    ],
+    "description": "Hold dumbbells with palms facing each other and curl them up. Targets biceps and forearms differently than standard curls.",
+    "equipment_ids": [
+      "3"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Bicep_curl#Hammer_curl"
+  },
+  {
+    "id": "26",
+    "name": "Box Jumps",
+    "category_id": "2",
+    "difficulty_id": "3",
+    "muscle_group_ids": [
+      "1",
+      "3",
+      "17",
+      "15"
+    ],
+    "description": "Jump onto a sturdy box or platform, landing softly. Improves explosive power and cardiovascular fitness.",
+    "equipment_ids": [
+      "17"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Plyometrics#Box_jumps"
+  },
+  {
+    "id": "27",
+    "name": "Mountain Climbers",
+    "category_id": "6",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "13",
+      "15",
+      "23",
+      "7",
+      "1"
+    ],
+    "description": "Start in a plank position and rapidly bring your knees towards your chest one at a time. A dynamic core and cardio exercise.",
+    "equipment_ids": [
+      "1"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Mountain_climber_(exercise)"
+  },
+  {
+    "id": "28",
+    "name": "Jump Squats",
+    "category_id": "1",
+    "difficulty_id": "3",
+    "muscle_group_ids": [
+      "1",
+      "2",
+      "3",
+      "15"
+    ],
+    "description": "Perform a regular squat, then explode upwards into a jump. Adds a plyometric element to squats.",
+    "equipment_ids": [
+      "1"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Jump_squat"
+  },
+  {
+    "id": "29",
+    "name": "Good Mornings (Barbell)",
+    "category_id": "2",
+    "difficulty_id": "3",
+    "muscle_group_ids": [
+      "2",
+      "4",
+      "3",
+      "21"
+    ],
+    "description": "With a barbell on your upper back, hinge at your hips, keeping legs almost straight, and lower your torso until it's almost parallel to the floor. Strengthens the posterior chain.",
+    "equipment_ids": [
+      "2"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Good_morning_(exercise)"
+  },
+  {
+    "id": "30",
+    "name": "Pistol Squats",
+    "category_id": "1",
+    "difficulty_id": "4",
+    "muscle_group_ids": [
+      "1",
+      "2",
+      "3",
+      "17"
+    ],
+    "description": "A single-leg squat, where one leg is extended forward. Requires significant balance and leg strength.",
+    "equipment_ids": [
+      "1"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Pistol_squat"
+  },
+  {
+    "id": "31",
+    "name": "Yoga: Downward-Facing Dog",
+    "category_id": "9",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "2",
+      "1",
+      "17",
+      "10",
+      "4"
+    ],
+    "description": "A foundational yoga pose that stretches the hamstrings, calves, and lengthens the spine. Forms an inverted 'V' shape with the body.",
+    "equipment_ids": [
+      "14"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Downward-facing_dog"
+  },
+  {
+    "id": "32",
+    "name": "Skipping (Jump Rope)",
+    "category_id": "8",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "15",
+      "17"
+    ],
+    "description": "A cardiovascular exercise using a jump rope. Improves coordination, agility, and endurance.",
+    "equipment_ids": [
+      "13"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Skipping_rope"
+  },
+  {
+    "id": "33",
+    "name": "Kettlebell Swings",
+    "category_id": "2",
+    "difficulty_id": "3",
+    "muscle_group_ids": [
+      "3",
+      "2",
+      "4",
+      "18",
+      "15"
+    ],
+    "description": "A ballistic exercise that builds explosive power in the posterior chain. Swing the kettlebell between your legs and then up to shoulder height, driving with the hips.",
+    "equipment_ids": [
+      "10"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Kettlebell_swing"
+  },
+  {
+    "id": "34",
+    "name": "Walking Lunges (with Dumbbells)",
+    "category_id": "1",
+    "difficulty_id": "3",
+    "muscle_group_ids": [
+      "1",
+      "2",
+      "3"
+    ],
+    "description": "Perform lunges while walking forward, holding dumbbells for added resistance. Builds leg strength and endurance.",
+    "equipment_ids": [
+      "3"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Lunge_(exercise)"
+  },
+  {
+    "id": "35",
+    "name": "Incline Dumbbell Press",
+    "category_id": "3",
+    "difficulty_id": "3",
+    "muscle_group_ids": [
+      "11",
+      "7",
+      "8",
+      "9"
+    ],
+    "description": "Lie on an incline bench and press dumbbells upwards. Targets the upper chest more effectively.",
+    "equipment_ids": [
+      "3",
+      "4"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Bench_press#Incline_bench_press"
+  },
+  {
+    "id": "36",
+    "name": "Pull-aparts (Resistance Band)",
+    "category_id": "4",
+    "difficulty_id": "2",
+    "muscle_group_ids": [
+      "26",
+      "18",
+      "22"
+    ],
+    "description": "Hold a resistance band with outstretched arms and pull it apart, squeezing your shoulder blades together. Improves posture and shoulder stability.",
+    "equipment_ids": [
+      "11"
+    ],
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Resistance_band#Face_Pulls_and_Pull-Aparts"
+  }
+]

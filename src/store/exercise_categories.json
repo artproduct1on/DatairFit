@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "name": "Legs",
+    "description": "Exercises primarily targeting the muscles of the lower body.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Leg_day"
+  },
+  {
+    "id": "2",
+    "name": "Full Body",
+    "description": "Compound exercises engaging multiple muscle groups across the body.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Full-body_workout"
+  },
+  {
+    "id": "3",
+    "name": "Chest",
+    "description": "Exercises focused on the pectoral muscles and surrounding areas.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Pectoralis_major_muscle"
+  },
+  {
+    "id": "4",
+    "name": "Shoulders",
+    "description": "Exercises designed to strengthen the deltoid muscles.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Deltoid_muscle"
+  },
+  {
+    "id": "5",
+    "name": "Back",
+    "description": "Exercises for the muscles of the back, including lats, rhomboids, and traps.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Back_muscles"
+  },
+  {
+    "id": "6",
+    "name": "Core",
+    "description": "Exercises that strengthen the abdominal muscles, obliques, and lower back.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Core_strength"
+  },
+  {
+    "id": "7",
+    "name": "Arms",
+    "description": "Exercises specifically for the biceps, triceps, and forearms.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Arm"
+  },
+  {
+    "id": "8",
+    "name": "Cardio",
+    "description": "Exercises focused on cardiovascular endurance and heart health.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Cardiovascular_exercise"
+  },
+  {
+    "id": "9",
+    "name": "Flexibility",
+    "description": "Exercises to improve range of motion and reduce muscle stiffness.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Flexibility"
+  }
+]

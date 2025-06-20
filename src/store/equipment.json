@@ -1,0 +1,97 @@
+[
+  {
+    "id": "1",
+    "name": "None",
+    "description": "No specific equipment is required for this exercise."
+  },
+  {
+    "id": "2",
+    "name": "Barbell",
+    "description": "A long metal bar, typically used with weights."
+  },
+  {
+    "id": "3",
+    "name": "Dumbbells",
+    "description": "Short bars with weights on each end, used individually or in pairs."
+  },
+  {
+    "id": "4",
+    "name": "Bench",
+    "description": "A flat or inclined surface used for exercises like bench press."
+  },
+  {
+    "id": "5",
+    "name": "Pull-up Bar",
+    "description": "A horizontal bar used for pull-ups."
+  },
+  {
+    "id": "6",
+    "name": "Weight (optional)",
+    "description": "Additional weight, such as plates or dumbbells, used to increase the intensity of an exercise."
+  },
+  {
+    "id": "7",
+    "name": "Leg Press Machine",
+    "description": "A machine that allows you to push weight with your legs."
+  },
+  {
+    "id": "8",
+    "name": "Rowing Machine",
+    "description": "A machine used to simulate the action of rowing a boat."
+  },
+  {
+    "id": "9",
+    "name": "Parallel Bars",
+    "description": "Two parallel bars used for dips and other exercises."
+  },
+  {
+    "id": "10",
+    "name": "Kettlebell",
+    "description": "A cast iron ball with a handle, used for ballistic exercises."
+  },
+  {
+    "id": "11",
+    "name": "Resistance Band",
+    "description": "An elastic band used for strength training and stretching."
+  },
+  {
+    "id": "12",
+    "name": "Cable Machine",
+    "description": "A versatile gym machine with adjustable cables and pulleys."
+  },
+  {
+    "id": "13",
+    "name": "Jump Rope",
+    "description": "A simple piece of equipment for cardiovascular exercise."
+  },
+  {
+    "id": "14",
+    "name": "Yoga Mat",
+    "description": "A padded mat for floor exercises, yoga, or stretching."
+  },
+  {
+    "id": "15",
+    "name": "Leg Curl Machine",
+    "description": "A machine used to isolate and strengthen the hamstrings."
+  },
+  {
+    "id": "16",
+    "name": "Leg Extension Machine",
+    "description": "A machine used to isolate and strengthen the quadriceps."
+  },
+  {
+    "id": "17",
+    "name": "Plyometric Box",
+    "description": "A sturdy box used for jumping exercises to build explosive power."
+  },
+  {
+    "id": "18",
+    "name": "Medicine Ball",
+    "description": "A weighted ball used for various exercises, including core and power movements."
+  },
+  {
+    "id": "19",
+    "name": "Stationary Bike",
+    "description": "A stationary bicycle used for cardiovascular exercise."
+  }
+]

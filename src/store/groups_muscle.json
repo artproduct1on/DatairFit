@@ -1,0 +1,164 @@
+[
+  {
+    "id": "1",
+    "name": "Quadriceps",
+    "description": "The large muscle group on the front of the thigh.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Quadriceps_femoris_muscle"
+  },
+  {
+    "id": "2",
+    "name": "Hamstrings",
+    "description": "The muscle group on the back of the thigh.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Hamstring"
+  },
+  {
+    "id": "3",
+    "name": "Glutes",
+    "description": "The muscles of the buttocks.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Gluteal_muscles"
+  },
+  {
+    "id": "4",
+    "name": "Lower Back",
+    "description": "The muscles in the lower region of the back.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Lower_back"
+  },
+  {
+    "id": "5",
+    "name": "Lats",
+    "description": "The large, flat muscles on the sides of the back.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Latissimus_dorsi_muscle"
+  },
+  {
+    "id": "6",
+    "name": "Forearms",
+    "description": "The muscles in the lower part of the arms, between the elbow and wrist.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Forearm"
+  },
+  {
+    "id": "7",
+    "name": "Pectorals",
+    "description": "The muscles of the chest.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Pectoralis_major_muscle"
+  },
+  {
+    "id": "8",
+    "name": "Triceps",
+    "description": "The muscle on the back of the upper arm.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Triceps_brachii_muscle"
+  },
+  {
+    "id": "9",
+    "name": "Anterior Deltoids",
+    "description": "The front part of the shoulder muscles.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Deltoid_muscle#Anterior_fibers"
+  },
+  {
+    "id": "10",
+    "name": "Deltoids",
+    "description": "The muscles forming the rounded contour of the shoulder.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Deltoid_muscle"
+  },
+  {
+    "id": "11",
+    "name": "Upper Chest",
+    "description": "The upper portion of the pectoral muscles.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Pectoralis_major_muscle#Parts"
+  },
+  {
+    "id": "12",
+    "name": "Biceps",
+    "description": "The muscle on the front of the upper arm.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Biceps_brachii_muscle"
+  },
+  {
+    "id": "13",
+    "name": "Abdominals",
+    "description": "The muscles of the abdomen.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Abdominal_muscles"
+  },
+  {
+    "id": "14",
+    "name": "Obliques",
+    "description": "The muscles on the sides of the abdomen.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Abdominal_external_oblique_muscle"
+  },
+  {
+    "id": "15",
+    "name": "Cardiovascular",
+    "description": "Relating to the heart and blood vessels.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Cardiovascular_system"
+  },
+  {
+    "id": "16",
+    "name": "Lateral Deltoids",
+    "description": "The side part of the shoulder muscles.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Deltoid_muscle#Lateral_fibers"
+  },
+  {
+    "id": "17",
+    "name": "Calves",
+    "description": "The muscles at the back of the lower leg.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Calf_muscle"
+  },
+  {
+    "id": "18",
+    "name": "Traps",
+    "description": "The large muscles extending over the back of the neck and shoulders.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Trapezius_muscle"
+  },
+  {
+    "id": "19",
+    "name": "Rotator Cuff",
+    "description": "A group of muscles and tendons surrounding the shoulder joint.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Rotator_cuff"
+  },
+  {
+    "id": "20",
+    "name": "Adductors",
+    "description": "Inner thigh muscles responsible for moving the legs inward.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Adductor_muscle_of_the_thigh"
+  },
+  {
+    "id": "21",
+    "name": "Erector Spinae",
+    "description": "Muscles along the spine that help with extension and rotation of the back.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Erector_spinae"
+  },
+  {
+    "id": "22",
+    "name": "Rhomboids",
+    "description": "Muscles in the upper back between the shoulder blades.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Rhomboid_muscles"
+  },
+  {
+    "id": "23",
+    "name": "Core (General)",
+    "description": "Encompasses various muscles of the torso that stabilize the spine and pelvis.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Core_strength"
+  },
+  {
+    "id": "24",
+    "name": "Gastrocnemius",
+    "description": "The largest muscle of the calf.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Gastrocnemius_muscle"
+  },
+  {
+    "id": "25",
+    "name": "Soleus",
+    "description": "A muscle in the calf, lying underneath the gastrocnemius.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Soleus_muscle"
+  },
+  {
+    "id": "26",
+    "name": "Deltoid (Posterior)",
+    "description": "The rear part of the shoulder muscles.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Deltoid_muscle#Posterior_fibers"
+  },
+  {
+    "id": "27",
+    "name": "Serratus Anterior",
+    "description": "Muscles that originate on the surface of the 1st to 8th ribs and insert along the entire medial border of the scapula.",
+    "wikipedia_link": "https://en.wikipedia.org/wiki/Serratus_anterior_muscle"
+  }
+]
