@@ -16,87 +16,88 @@ import HeaderMenu from "./HeaderMenu";
 export default function Header() {
   const [anchorElUser, setAnchorElUser] = useState<Element | null>(null);
   const handleOpenUserMenu = (e: MouseEvent) => setAnchorElUser(e.currentTarget);
-  return <AppBar
-    position="fixed"
-    sx={{ bgcolor: "background.paper" }}
-  >
-    <Container
-      maxWidth="xl"
-      sx={{
-        gap: 2,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between"
-      }}
+  return (
+    <AppBar
+      position="sticky"
+      sx={{ bgcolor: "background.paper" }}
     >
-
-      <Button
-        component={Link}
-        to="/"
-        size="large"
-        type="button"
-        aria-label="account of current user"
+      <Container
+        maxWidth="xl"
         sx={{
-          gap: 0.5,
+          gap: 2,
           display: "flex",
           alignItems: "center",
-          p: 0.5,
+          justifyContent: "space-between"
         }}
       >
-        <Avatar
-          sx={{ width: 25, height: 25 }}
-          variant='rounded'
-          src="/logo.png"
-        />
-        <Typography
-          variant="h5"
-          noWrap
-          sx={{ color: "text.primary", }}
-        >
-          DFit
-        </Typography>
-      </Button>
 
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          gap: 1,
-        }}
-      >
         <Button
-          size="small"
+          component={Link}
+          to="/"
+          size="large"
           type="button"
-          aria-label="Points for Activity"
+          aria-label="account of current user"
+          sx={{
+            gap: 0.5,
+            display: "flex",
+            alignItems: "center",
+            p: 0.5,
+          }}
+        >
+          <Avatar
+            sx={{ width: 25, height: 25 }}
+            variant='rounded'
+            src="/logo.png"
+          />
+          <Typography
+            variant="h5"
+            noWrap
+            sx={{ color: "text.primary", }}
+          >
+            DFit
+          </Typography>
+        </Button>
+
+        <Box
           sx={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "flex-end",
-            backgroundColor: "background.default",
+            gap: 1,
           }}
         >
-          <Typography>0</Typography>
-          <BoltOutlinedIcon sx={{ color: "yellow" }} />
+          <Button
+            size="small"
+            type="button"
+            aria-label="Points for Activity"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-end",
+              backgroundColor: "background.default",
+            }}
+          >
+            <Typography>0</Typography>
+            <BoltOutlinedIcon sx={{ color: "yellow" }} />
 
-        </Button>
+          </Button>
 
-        <IconButton
-          size="large"
-          edge="end"
-          aria-label="account of current user"
-          onClick={handleOpenUserMenu}
-        >
-          <AccountCircleIcon />
-        </IconButton>
-      </Box>
+          <IconButton
+            size="large"
+            edge="end"
+            aria-label="account of current user"
+            onClick={handleOpenUserMenu}
+          >
+            <AccountCircleIcon />
+          </IconButton>
+        </Box>
 
-    </Container>
+      </Container>
 
-    <HeaderMenu
-      anchorElUser={anchorElUser}
-      setAnchorElUser={setAnchorElUser}
-    />
+      <HeaderMenu
+        anchorElUser={anchorElUser}
+        setAnchorElUser={setAnchorElUser}
+      />
 
-  </AppBar >;
-
+    </AppBar >
+  );
 }

@@ -1,13 +1,13 @@
 require('dotenv').config()
 
 const express = require('express');
+const sequelize = require('./config/database');
 const cors = require('cors')
 const PORT = process.env.PORT;
 const path = require('path');
 const User = require('./models/User');
 const authRoutes = require('./routes/authRoutes');
 
-Category.hasMany(Product);
 
 const app = express();
 app.use(express.static('public'));
@@ -26,10 +26,11 @@ if (process.env.NODE_ENV === 'production') {
 
 const start = async () => {
     try {
-        await sequelize.sync().then(
-            result => console.log(result),
-            err => console.log(err)
-        );
+        await sequelize.sync()
+            .then(
+                result => { },
+                err => console.log(err)
+            );
 
         app.listen(PORT, () => {
             console.log(`\n\nServer started on ${PORT} port...`)

@@ -12,6 +12,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import TranslateRoundedIcon from "@mui/icons-material/TranslateRounded";
 import { Dispatch, SetStateAction, useState } from "react";
+import { Link } from "react-router-dom";
 
 const themeOptions = [
   { value: "dark", label: "Dark", icon: <NightlightRoundedIcon fontSize='small' /> },
@@ -77,11 +78,11 @@ function HeaderMenu({ anchorElUser, setAnchorElUser }: HeaderMenuProps) {
       open={!!anchorElUser && !subMenu}
       onClose={handleCloseUserMenu}
     >
-      <MenuItem sx={{ gap: 1 }}>
+      {/* <MenuItem sx={{ gap: 1 }}>
         <Typography>
           Profile
         </Typography>
-      </MenuItem>
+      </MenuItem> */}
 
       <MenuItem
         sx={{ gap: 1 }}
@@ -105,10 +106,15 @@ function HeaderMenu({ anchorElUser, setAnchorElUser }: HeaderMenuProps) {
 
       <Divider />
 
-      <MenuItem sx={{ gap: 1 }}>
+      <MenuItem
+        sx={{ gap: 1 }}
+        component={Link}
+        to="/authentication"
+        onClick={handleCloseUserMenu}
+      >
         <LogoutIcon fontSize='small' />
         <Typography sx={{ textAlign: "center" }}>
-          Log out
+          Log in
         </Typography>
       </MenuItem>
 

@@ -1,11 +1,8 @@
 import { createTheme } from "@mui/material/styles";
 
-// LIGHT THEME
 const lightTheme = createTheme({
   palette: {
     mode: "light",
-
-    // Основні кольори
     primary: { main: "#007aff" },
     secondary: { main: "#6c5ce7" },
     background: {
@@ -25,7 +22,6 @@ const lightTheme = createTheme({
   },
 });
 
-// DARK THEME
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -46,13 +42,6 @@ const darkTheme = createTheme({
     divider: "#424242",
   },
   components: {
-    MuiCssBaseline: {
-      styleOverrides: (theme) => ({
-        body: {
-          backgroundColor: theme.palette.background.default,
-        },
-      })
-    },
     MuiButton: {
       styleOverrides: {
         root: {
@@ -63,6 +52,9 @@ const darkTheme = createTheme({
           "&:active": {
             backgroundColor: "rgba(255, 255, 255, 0.2)",
           },
+        },
+        contained: {
+          color: "#1e1e1e",
         },
       },
     },
