@@ -6,8 +6,8 @@ import Header from "./components/Header";
 import NavigationBar from "./components/Header/NavigationBar";
 import ThemeSettings from "./utils/ThemeSettings";
 
-const Dashboard = lazy(() => import("./pages/Dashboard"));
-const NotFound = lazy(() => import("./pages/NotFound"));
+const DashboardPage = lazy(() => import("./pages/DashboardPage"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 function App() {
   const { theme } = useGlobalStore((state) => state);
@@ -17,8 +17,8 @@ function App() {
       <Header />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" index element={<Dashboard />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" index element={<DashboardPage />} />
+          <Route path="*" element={<NotFoundPage />} />
 
           <Route path="/exercises" element={<Typography variant="h1">Exercises</Typography>} />
           <Route path="/exercises/:id" element={<Typography variant="h1">Exercise Details</Typography>} />

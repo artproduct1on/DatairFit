@@ -22,7 +22,12 @@ export default function Header() {
   >
     <Container
       maxWidth="xl"
-      sx={{ gap: 2, display: "flex", alignItems: "center", justifyContent: "space-between" }}
+      sx={{
+        gap: 2,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between"
+      }}
     >
 
       <Button
@@ -32,7 +37,10 @@ export default function Header() {
         type="button"
         aria-label="account of current user"
         sx={{
-          gap: 0.5, display: "flex", alignItems: "center",
+          gap: 0.5,
+          display: "flex",
+          alignItems: "center",
+          p: 0.5,
         }}
       >
         <Avatar
@@ -51,7 +59,9 @@ export default function Header() {
 
       <Box
         sx={{
-          display: "flex", alignItems: "center", gap: 1
+          display: "flex",
+          alignItems: "center",
+          gap: 1,
         }}
       >
         <Button
@@ -59,7 +69,9 @@ export default function Header() {
           type="button"
           aria-label="Points for Activity"
           sx={{
-            display: "flex", alignItems: "center", justifyContent: "flex-end",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-end",
             backgroundColor: "background.default",
           }}
         >
