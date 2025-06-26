@@ -24,15 +24,10 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: true,
   },
-  energy: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    defaultValue: 0,
-  },
   savedTrainings: {
     type: DataTypes.JSON,
     allowNull: false,
-    defaultValue: [], // ['training_uuid_1', 'training_uuid_2']
+    defaultValue: [], // ['training_id_1', 'training_id_2']
   },
 }, {
   hooks: {
