@@ -2,9 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 
-import useAuthStore from "../store/authStore";
+import useAuthStore from "../../store/authStore";
 
 // MUI Components
 import Box from "@mui/material/Box";
@@ -16,42 +15,28 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Alert from "@mui/material/Alert";
 import Link from "@mui/material/Link";
 
-import api from "../utils/api";
-
-interface AuthFormInputs {
-  name?: string;
-  email: string;
-  password: string;
-}
+import api from "../../utils/api";
+import { AuthFormInputs } from "./types";
+import { loginSchema, registerSchema } from "./helpers";
+import { API_POST } from "../../utils/constants";
 
 export default function AuthenticationPage() {
+  const navigate = useNavigate();
   const [isRegisterMode, setIsRegisterMode] = useState(false);
 
-  const navigate = useNavigate();
-
-  const login = useAuthStore((state) => state.login);
-  const setLoading = useAuthStore((state) => state.setLoading);
-  const setError = useAuthStore((state) => state.setError);
-  const isLoading = useAuthStore((state) => state.isLoading);
-  const authError = useAuthStore((state) => state.error);
-
-  // Validation schemas for Yup
-  const loginSchema = yup.object().shape({
-    email: yup.string().email("Invalid Email format").required("Email is required"),
-    password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
-  });
-
-  const registerSchema = yup.object().shape({
-    name: yup.string().required("Name is required"),
-    email: yup.string().email("Invalid Email format").required("Email is required"),
-    password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required"),
-  });
+  const {
+    login,
+    isLoading,
+    setLoading,
+    error,
+    setError,
+  } = useAuthStore((state) => state);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset, // Used to clear the form
+    reset,
   } = useForm<AuthFormInputs>({
     resolver: yupResolver(isRegisterMode ? registerSchema : loginSchema),
     defaultValues: {
@@ -64,23 +49,21 @@ export default function AuthenticationPage() {
   const onSubmit: SubmitHandler<AuthFormInputs> = async (data) => {
     setLoading(true);
     setError(null);
-
     try {
       const response = isRegisterMode ?
-        await api.post("/auth/register", { name: data.name, email: data.email, password: data.password }) :
-        await api.post("/auth/login", { email: data.email, password: data.password });
+        await api.post(API_POST.REGISTER, { name: data.name, email: data.email, password: data.password }) :
+        await api.post(API_POST.LOGIN, { email: data.email, password: data.password });
 
       const { token, user } = response.data;
       login(token, user);
 
       navigate("/");
     } catch (err: any) {
-      const errorMessage = err.response?.data?.message || "Authentication failed. Please try again.";
-      setError(errorMessage);
+      setError("Authentication failed. Please try again.");
       console.error("Authentication error:", err);
     } finally {
       setLoading(false);
-    }
+    };
   };
 
   const toggleMode = () => {
@@ -103,9 +86,9 @@ export default function AuthenticationPage() {
           {isRegisterMode ? "Register" : "Log In"}
         </Typography>
 
-        {authError && (
+        {error && (
           <Alert severity="error" sx={{ mb: 2 }}>
-            {authError}
+            {error}
           </Alert>
         )}
 
@@ -155,8 +138,14 @@ export default function AuthenticationPage() {
 
         <Typography variant="body2" textAlign="center" sx={{ mt: 2 }}>
           {isRegisterMode ? "Already have an account?" : "Don't have an account?"}
-          {" "}
-          <Link component="button" onClick={toggleMode} sx={{ cursor: "pointer" }}>
+          <Link
+            component="button"
+            onClick={toggleMode}
+            sx={{
+              cursor: "pointer",
+              ml: 0.5,
+            }}
+          >
             {isRegisterMode ? "Log In" : "Register"}
           </Link>
         </Typography>

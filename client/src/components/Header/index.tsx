@@ -10,22 +10,33 @@ import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
 // icons
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import BoltOutlinedIcon from "@mui/icons-material/BoltOutlined";
 import HeaderMenu from "./HeaderMenu";
+import useAuthStore from "../../store/authStore";
 
 export default function Header() {
+
+  const { isAuthenticated, user } = useAuthStore();
+
   const [anchorElUser, setAnchorElUser] = useState<Element | null>(null);
   const handleOpenUserMenu = (e: MouseEvent) => setAnchorElUser(e.currentTarget);
+  const getInitial = (name: string | undefined): string => {
+    return name ? name.charAt(0).toUpperCase() : "";
+  };
+
   return (
     <AppBar
       position="sticky"
-      sx={{ bgcolor: "background.paper" }}
+      sx={{
+        bgcolor: "background.paper",
+        height: 45,
+      }}
     >
       <Container
         maxWidth="xl"
         sx={{
           gap: 2,
           display: "flex",
+          height: "100%",
           alignItems: "center",
           justifyContent: "space-between"
         }}
@@ -65,29 +76,21 @@ export default function Header() {
             gap: 1,
           }}
         >
-          <Button
-            size="small"
-            type="button"
-            aria-label="Points for Activity"
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-end",
-              backgroundColor: "background.default",
-            }}
-          >
-            <Typography>0</Typography>
-            <BoltOutlinedIcon sx={{ color: "yellow" }} />
-
-          </Button>
 
           <IconButton
             size="large"
             edge="end"
             aria-label="account of current user"
             onClick={handleOpenUserMenu}
+            sx={{ width: 30, height: 30 }}
           >
-            <AccountCircleIcon />
+            {isAuthenticated && user?.name ? (
+              <Avatar sx={{ width: 30, height: 30 }}>
+                {getInitial(user.name)}
+              </Avatar>
+            ) : (
+              <AccountCircleIcon sx={{ fontSize: 30, color: "inherit" }} />
+            )}
           </IconButton>
         </Box>
 

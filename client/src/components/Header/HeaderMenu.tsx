@@ -1,4 +1,4 @@
-import useGlobalStore from "../../store/globalStore";
+import useSettingsStore from "../../store/settingsStore";
 // ui
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
@@ -11,8 +11,10 @@ import ContrastIcon from "@mui/icons-material/Contrast";
 import LogoutIcon from "@mui/icons-material/Logout";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import TranslateRoundedIcon from "@mui/icons-material/TranslateRounded";
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import useAuthStore from "../../store/authStore";
+import { HeaderMenuProps } from "./types";
 
 const themeOptions = [
   { value: "dark", label: "Dark", icon: <NightlightRoundedIcon fontSize='small' /> },
@@ -26,14 +28,9 @@ const languageOptions = [
   { value: "de", label: "Deutsch" },
 ];
 
-interface HeaderMenuProps {
-  anchorElUser: Element | null;
-  setAnchorElUser: Dispatch<SetStateAction<Element | null>>;
-};
-
 function HeaderMenu({ anchorElUser, setAnchorElUser }: HeaderMenuProps) {
-
-  const { theme, setTheme, lang, setLang } = useGlobalStore();
+  const { theme, setTheme, lang, setLang } = useSettingsStore();
+  const { isAuthenticated, logout } = useAuthStore();
   const [subMenu, setSubMenu] = useState<string | null>(null);
 
   const handleCloseSubMenu = () => setSubMenu(null);
@@ -78,11 +75,19 @@ function HeaderMenu({ anchorElUser, setAnchorElUser }: HeaderMenuProps) {
       open={!!anchorElUser && !subMenu}
       onClose={handleCloseUserMenu}
     >
-      {/* <MenuItem sx={{ gap: 1 }}>
+
+      <MenuItem
+        component={Link}
+        to={isAuthenticated ? "/profile" : "/authentication"}
+        onClick={handleCloseUserMenu}
+        sx={{ gap: 1 }}
+      >
         <Typography>
-          Profile
+          {isAuthenticated ? "Profile" : "Log in/Sign up"}
         </Typography>
-      </MenuItem> */}
+      </MenuItem>
+
+      <Divider />
 
       <MenuItem
         sx={{ gap: 1 }}
@@ -106,19 +111,22 @@ function HeaderMenu({ anchorElUser, setAnchorElUser }: HeaderMenuProps) {
 
       <Divider />
 
-      <MenuItem
-        sx={{ gap: 1 }}
-        component={Link}
-        to="/authentication"
-        onClick={handleCloseUserMenu}
-      >
-        <LogoutIcon fontSize='small' />
-        <Typography sx={{ textAlign: "center" }}>
-          Log in
-        </Typography>
-      </MenuItem>
+      {isAuthenticated && (
+        <MenuItem
+          sx={{ gap: 1 }}
+          onClick={() => {
+            logout();
+            handleCloseUserMenu();
+          }}
+        >
+          <LogoutIcon fontSize='small' />
+          <Typography sx={{ textAlign: "center" }}>
+            Log out
+          </Typography>
+        </MenuItem>
+      )}
 
-    </Menu>
+    </Menu >
 
     <Menu
       sx={{ mt: 5 }}

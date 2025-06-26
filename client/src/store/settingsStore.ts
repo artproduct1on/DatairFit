@@ -1,12 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-
-interface GlobalStore {
-  theme: string;
-  lang: string;
-  setTheme: (theme: string) => void;
-  setLang: (lang: string) => void;
-}
+import { SettingsStore } from "./types";
+import { LOCAL_STORAGE } from "../utils/constants";
 
 const getInitialLang = (): string => {
   const browserLang = navigator.language.split("-")[0];
@@ -22,7 +17,7 @@ const getInitialLang = (): string => {
   }
 };
 
-const useGlobalStore = create<GlobalStore>()(
+const useSettingsStore = create<SettingsStore>()(
   persist(
     (set) => ({
       theme: window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
@@ -31,7 +26,7 @@ const useGlobalStore = create<GlobalStore>()(
       setLang: (newLang) => set({ lang: newLang })
     }),
     {
-      name: "global",
+      name: LOCAL_STORAGE.SETTINGS,
       partialize: (state) => ({
         theme: state.theme
       }),
@@ -39,8 +34,8 @@ const useGlobalStore = create<GlobalStore>()(
   )
 );
 
-const subscribe = useGlobalStore.subscribe(console.log);
+const subscribe = useSettingsStore.subscribe(console.log);
 subscribe();
 
-export default useGlobalStore;
+export default useSettingsStore;
 

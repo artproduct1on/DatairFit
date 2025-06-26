@@ -1,13 +1,13 @@
 import axios from "axios";
 
-const apiClient = axios.create({
+const api = axios.create({
   baseURL: "/api",
   headers: {
     "Content-Type": "application/json",
   },
 });
 
-apiClient.interceptors.request.use(
+api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("auth-storage");
     if (token) {
@@ -27,4 +27,4 @@ apiClient.interceptors.request.use(
   }
 );
 
-export default apiClient;
+export default api;

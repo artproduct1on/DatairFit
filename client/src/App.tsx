@@ -1,7 +1,7 @@
-import { CssBaseline, ThemeProvider, Typography } from "@mui/material";
+import { CircularProgress, CssBaseline, ThemeProvider, Typography } from "@mui/material";
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import useGlobalStore from "./store/globalStore";
+import useSettingsStore from "./store/settingsStore";
 import Header from "./components/Header";
 import NavigationBar from "./components/Header/NavigationBar";
 import ThemeSettings from "./utils/ThemeSettings";
@@ -11,13 +11,13 @@ const AuthenticationPage = lazy(() => import("./pages/AuthenticationPage"));
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 function App() {
-  const { theme } = useGlobalStore((state) => state);
+  const { theme } = useSettingsStore();
 
   return (
     <ThemeProvider theme={ThemeSettings(theme)}>
       <CssBaseline />
       <Header />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<CircularProgress />}>
         <Routes>
           <Route path="/" index element={<DashboardPage />} />
           <Route path="/authentication" index element={<AuthenticationPage />} />
