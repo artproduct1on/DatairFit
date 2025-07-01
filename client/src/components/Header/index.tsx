@@ -63,9 +63,12 @@ export default function Header() {
           <Typography
             variant="h5"
             noWrap
-            sx={{ color: "text.primary", }}
+            sx={{
+              color: "text.primary",
+              textTransform: "none",
+            }}
           >
-            DFit
+            D-Fitness
           </Typography>
         </Button>
 

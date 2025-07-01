@@ -20,7 +20,7 @@ const getInitialLang = (): string => {
 const useSettingsStore = create<SettingsStore>()(
   persist(
     (set) => ({
-      theme: window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light",
+      theme: "system",
       lang: getInitialLang(),
       setTheme: (newTheme: string) => set({ theme: newTheme }),
       setLang: (newLang) => set({ lang: newLang })
@@ -28,7 +28,8 @@ const useSettingsStore = create<SettingsStore>()(
     {
       name: LOCAL_STORAGE.SETTINGS,
       partialize: (state) => ({
-        theme: state.theme
+        theme: state.theme,
+        lang: state.lang
       }),
     }
   )

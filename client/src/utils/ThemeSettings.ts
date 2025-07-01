@@ -68,6 +68,6 @@ export default function ThemeSettings(theme: string) {
     case "dark":
       return darkTheme;
     default:
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? darkTheme : lightTheme;
+      return (window.matchMedia("(prefers-color-scheme: dark)").matches ? darkTheme : lightTheme) || lightTheme;
   }
 };

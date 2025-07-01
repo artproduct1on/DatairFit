@@ -1,11 +1,7 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-
-import useAuthStore from "../../store/authStore";
-
-// MUI Components
+// MUI
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -14,23 +10,27 @@ import Paper from "@mui/material/Paper";
 import CircularProgress from "@mui/material/CircularProgress";
 import Alert from "@mui/material/Alert";
 import Link from "@mui/material/Link";
-
-import api from "../../utils/api";
+// Custom
+import useSettingsStore from "../../store/settingsStore.ts";
+import useAuthStore from "../../store/authStore";
 import { AuthFormInputs } from "./types";
 import { loginSchema, registerSchema } from "./helpers";
-import { API_POST } from "../../utils/constants";
+import { useAuthSignIn } from "../../hooks/useAuth";
+import t from "./translate.json";
 
 export default function AuthenticationPage() {
-  const navigate = useNavigate();
+
   const [isRegisterMode, setIsRegisterMode] = useState(false);
 
+  const { lang } = useSettingsStore();
+
   const {
-    login,
     isLoading,
-    setLoading,
     error,
     setError,
-  } = useAuthStore((state) => state);
+  } = useAuthStore();
+
+  const { onSubmit } = useAuthSignIn(isRegisterMode);
 
   const {
     register,
@@ -38,33 +38,13 @@ export default function AuthenticationPage() {
     formState: { errors },
     reset,
   } = useForm<AuthFormInputs>({
-    resolver: yupResolver(isRegisterMode ? registerSchema : loginSchema),
+    resolver: yupResolver(isRegisterMode ? registerSchema(lang) : loginSchema(lang)),
     defaultValues: {
       name: "",
       email: "",
       password: "",
     },
   });
-
-  const onSubmit: SubmitHandler<AuthFormInputs> = async (data) => {
-    setLoading(true);
-    setError(null);
-    try {
-      const response = isRegisterMode ?
-        await api.post(API_POST.REGISTER, { name: data.name, email: data.email, password: data.password }) :
-        await api.post(API_POST.LOGIN, { email: data.email, password: data.password });
-
-      const { token, user } = response.data;
-      login(token, user);
-
-      navigate("/");
-    } catch (err: any) {
-      setError("Authentication failed. Please try again.");
-      console.error("Authentication error:", err);
-    } finally {
-      setLoading(false);
-    };
-  };
 
   const toggleMode = () => {
     setIsRegisterMode((prevMode) => !prevMode);
@@ -81,9 +61,22 @@ export default function AuthenticationPage() {
         bgcolor: "background.default",
       }}
     >
-      <Paper elevation={3} sx={{ padding: 4, borderRadius: 2, width: "100%", maxWidth: 400 }}>
-        <Typography variant="h5" component="h1" gutterBottom textAlign="center">
-          {isRegisterMode ? "Register" : "Log In"}
+      <Paper
+        elevation={3}
+        sx={{
+          padding: 4,
+          borderRadius: 2,
+          width: "100%",
+          maxWidth: 400,
+        }}
+      >
+        <Typography
+          variant="h5"
+          component="h1"
+          gutterBottom
+          textAlign="center"
+        >
+          {isRegisterMode ? t[lang].register : t[lang].login}
         </Typography>
 
         {error && (
@@ -95,7 +88,7 @@ export default function AuthenticationPage() {
         <form onSubmit={handleSubmit(onSubmit)}>
           {isRegisterMode && (
             <TextField
-              label="Name"
+              label={t[lang].name}
               variant="outlined"
               fullWidth
               margin="normal"
@@ -105,7 +98,7 @@ export default function AuthenticationPage() {
             />
           )}
           <TextField
-            label="Email"
+            label={t[lang].email}
             variant="outlined"
             fullWidth
             margin="normal"
@@ -115,7 +108,7 @@ export default function AuthenticationPage() {
             helperText={errors.email?.message}
           />
           <TextField
-            label="Password"
+            label={t[lang].password}
             variant="outlined"
             fullWidth
             margin="normal"
@@ -132,12 +125,16 @@ export default function AuthenticationPage() {
             sx={{ mt: 2, mb: 1 }}
             disabled={isLoading}
           >
-            {isLoading ? <CircularProgress size={24} color="inherit" /> : (isRegisterMode ? "Register" : "Log In")}
+            {
+              isLoading ?
+                <CircularProgress size={24} color="inherit" /> :
+                (isRegisterMode ? t[lang].signUp : t[lang].signIn)
+            }
           </Button>
         </form>
 
         <Typography variant="body2" textAlign="center" sx={{ mt: 2 }}>
-          {isRegisterMode ? "Already have an account?" : "Don't have an account?"}
+          {isRegisterMode ? t[lang].alreadyHaveAccount : t[lang].noAccount}
           <Link
             component="button"
             onClick={toggleMode}
@@ -146,7 +143,7 @@ export default function AuthenticationPage() {
               ml: 0.5,
             }}
           >
-            {isRegisterMode ? "Log In" : "Register"}
+            {isRegisterMode ? t[lang].login : t[lang].register}
           </Link>
         </Typography>
       </Paper>

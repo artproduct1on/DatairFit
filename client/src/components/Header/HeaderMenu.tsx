@@ -1,12 +1,11 @@
 import useSettingsStore from "../../store/settingsStore";
+import t from "./translate.json";
 // ui
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
-// icons
-import NightlightRoundedIcon from "@mui/icons-material/NightlightRounded";
-import SunnyIcon from "@mui/icons-material/Sunny";
+// icon
 import ContrastIcon from "@mui/icons-material/Contrast";
 import LogoutIcon from "@mui/icons-material/Logout";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
@@ -15,28 +14,18 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import useAuthStore from "../../store/authStore";
 import { HeaderMenuProps } from "./types";
-
-const themeOptions = [
-  { value: "dark", label: "Dark", icon: <NightlightRoundedIcon fontSize='small' /> },
-  { value: "system", label: "System", icon: <ContrastIcon fontSize='small' /> },
-  { value: "light", label: "Light", icon: <SunnyIcon /> },
-];
-
-const languageOptions = [
-  { value: "ua", label: "Українська" },
-  { value: "en", label: "English" },
-  { value: "de", label: "Deutsch" },
-];
+import { languageOptions, themeOptions } from "./helpers";
 
 function HeaderMenu({ anchorElUser, setAnchorElUser }: HeaderMenuProps) {
+
+  const [subMenu, setSubMenu] = useState<string | null>(null);
   const { theme, setTheme, lang, setLang } = useSettingsStore();
   const { isAuthenticated, logout } = useAuthStore();
-  const [subMenu, setSubMenu] = useState<string | null>(null);
 
   const handleCloseSubMenu = () => setSubMenu(null);
   const handleCloseUserMenu = () => setAnchorElUser(null);
 
-  const themeMenu = themeOptions.map(({ value, label, icon }) => (
+  const themeMenu = themeOptions(lang).map(({ value, label, Icon }) => (
     <MenuItem
       key={value}
       onClick={() => setTheme(value)}
@@ -45,7 +34,7 @@ function HeaderMenu({ anchorElUser, setAnchorElUser }: HeaderMenuProps) {
         color: theme === value ? "primary.main" : "text.primary",
       }}
     >
-      {icon}
+      <Icon />
       <Typography>{label}</Typography>
     </MenuItem>
   ));
@@ -83,7 +72,7 @@ function HeaderMenu({ anchorElUser, setAnchorElUser }: HeaderMenuProps) {
         sx={{ gap: 1 }}
       >
         <Typography>
-          {isAuthenticated ? "Profile" : "Log in/Sign up"}
+          {isAuthenticated ? t[lang].profile : t[lang].login}
         </Typography>
       </MenuItem>
 
@@ -95,7 +84,7 @@ function HeaderMenu({ anchorElUser, setAnchorElUser }: HeaderMenuProps) {
       >
         <ContrastIcon fontSize='small' />
         <Typography>
-          Theme
+          {t[lang].theme}
         </Typography>
       </MenuItem>
 
@@ -105,13 +94,12 @@ function HeaderMenu({ anchorElUser, setAnchorElUser }: HeaderMenuProps) {
       >
         <TranslateRoundedIcon fontSize='small' />
         <Typography>
-          Language
+          {t[lang].language}
         </Typography>
       </MenuItem>
 
-      <Divider />
-
-      {isAuthenticated && (
+      {isAuthenticated && <>
+        <Divider />
         <MenuItem
           sx={{ gap: 1 }}
           onClick={() => {
@@ -121,10 +109,11 @@ function HeaderMenu({ anchorElUser, setAnchorElUser }: HeaderMenuProps) {
         >
           <LogoutIcon fontSize='small' />
           <Typography sx={{ textAlign: "center" }}>
-            Log out
+            {t[lang].logout}
           </Typography>
         </MenuItem>
-      )}
+      </>
+      }
 
     </Menu >
 
@@ -145,7 +134,9 @@ function HeaderMenu({ anchorElUser, setAnchorElUser }: HeaderMenuProps) {
         sx={{ gap: 1 }}
       >
         <ArrowBackRoundedIcon fontSize='small' />
-        <Typography>Back</Typography>
+        <Typography>
+          {t[lang].back}
+        </Typography>
       </MenuItem>
       <Divider />
       {

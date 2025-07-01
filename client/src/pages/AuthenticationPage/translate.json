@@ -1,0 +1,50 @@
+{
+  "en": {
+    "login": "Log in",
+    "register": "Register",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "yup": {
+      "required": "This field is required",
+      "email": "Invalid email format",
+      "min": "Password must be at least 6 characters"
+    },
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "alreadyHaveAccount": "Already have an account?",
+    "noAccount": "Don't have an account?"
+  },
+  "de": {
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "name": "Name",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "yup": {
+      "required": "Dieses Feld ist erforderlich",
+      "email": "Ungültiges E-Mail-Format",
+      "min": "Das Passwort muss mindestens 6 Zeichen lang sein"
+    },
+    "signIn": "Anmelden",
+    "signUp": "Registrieren",
+    "alreadyHaveAccount": "Hast du bereits ein Konto?",
+    "noAccount": "Hast du noch kein Konto?"
+  },
+  "uk": {
+    "login": "Увійти",
+    "register": "Реєстрація",
+    "name": "Ім'я",
+    "email": "Електронна пошта",
+    "password": "Пароль",
+    "yup": {
+      "required": "Це поле є обов'язковим",
+      "email": "Невірний формат електронної пошти",
+      "min": "Пароль повинен містити не менше 6 символів"
+    },
+    "signIn": "Увійти",
+    "signUp": "Реєстрація",
+    "alreadyHaveAccount": "Вже маєте аккаунт?",
+    "noAccount": "Немає аккаунту?"
+  }
+}

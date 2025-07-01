@@ -1,0 +1,56 @@
+{
+  "en": {
+    "navbar": {
+      "dashboard": "Dashboard",
+      "training": "Training",
+      "exercises": "Exercises"
+    },
+    "profile": "Profile",
+    "login": "Sign In / Sign Up",
+    "theme": "Theme",
+    "themeLabels": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "language": "Language",
+    "logut": "Log out",
+    "back": "Back"
+  },
+  "de": {
+    "navbar": {
+      "dashboard": "Dashboard",
+      "training": "Training",
+      "exercises": "Exercises"
+    },
+    "profile": "Profil",
+    "login": "Anmelden / Registrieren",
+    "theme": "Thema",
+    "themeLabels": {
+      "light": "Hell",
+      "dark": "Dunkel",
+      "system": "System"
+    },
+    "language": "Sprache",
+    "logut": "Ausloggen",
+    "back": "Zurück"
+  },
+  "uk": {
+    "navbar": {
+      "dashboard": "Панель",
+      "training": "Тренування",
+      "exercises": "Вправи"
+    },
+    "profile": "Профіль",
+    "login": "Вхід / Реєстрація",
+    "theme": "Тема",
+    "themeLabels": {
+      "light": "Світла",
+      "dark": "Темна",
+      "system": "Система"
+    },
+    "language": "Мова",
+    "logut": "Вийти",
+    "back": "Назад"
+  }
+}

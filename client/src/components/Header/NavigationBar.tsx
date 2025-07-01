@@ -1,19 +1,13 @@
 import { NavLink } from "react-router-dom";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-// icons
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import TrainingIcon from "@mui/icons-material/FitnessCenter";
-import BlogIcon from "@mui/icons-material/Book";
+import useSettingsStore from "../../store/settingsStore";
 import { Container, Typography } from "@mui/material";
-
-const pages = [
-  { title: "Dashboard", Icon: DashboardIcon, path: "/" },
-  { title: "Training", Icon: TrainingIcon, path: "/training" },
-  { title: "Exercises", Icon: BlogIcon, path: "/exercises" },
-];
+import { pages } from "./helpers";
 
 function NavigationBar() {
+  const { lang } = useSettingsStore();
+
   return (
     <Container
       sx={{
@@ -36,7 +30,7 @@ function NavigationBar() {
           padding: 0,
         }}
       >
-        {pages.map(({ title, Icon, path }) => (
+        {pages(lang).map(({ title, Icon, path }) => (
           <Button
             key={path}
             component={NavLink}
@@ -53,7 +47,9 @@ function NavigationBar() {
             }}
           >
             <Icon
-              sx={{ fontSize: { xs: "x-large", md: "large" } }}
+              sx={{
+                fontSize: { xs: "x-large", md: "large" },
+              }}
             />
             <Typography
               variant="body2"

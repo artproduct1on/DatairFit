@@ -1,6 +1,8 @@
+export type LangType = string;
+
 export interface SettingsStore {
   theme: string;
-  lang: string;
+  lang: LangType;
   setTheme: (theme: string) => void;
   setLang: (lang: string) => void;
 }
